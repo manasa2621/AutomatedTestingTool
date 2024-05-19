@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block content %}
+<h1 class="container-fluid pt-2" style="text-align: center">
+  This is staff view
+</h1>
+<div class="image-container">
+  <!-- Link to Multiple Choice Questions -->
+  <a href="{{url_for('multipleChoiceQuestions')}}"
+    ><img
+      src="static/assets/Multiple Choice Questions.png"
+      class="btTxt submit"
+      style="display: block"
+      alt="multiple_choice_question_logo"
+  /></a>
+
+  <!-- Link to Formative Assessments -->
+  <a href="{{url_for('render_formative_assessment')}}"
+    ><img
+      src="static/assets/formative_assessment.png"
+      class="btTxt submit"
+      style="display: block"
+      alt="formative_assessments_logo"
+  /></a>
+</div>
+{% endblock content %}

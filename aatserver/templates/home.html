@@ -1,0 +1,25 @@
+<!-- This line extends out to the layout template and references all the uniques material of home page. This can be done across all pages so anything that is the same on all pages can be coded into layout and all pages will inherit it.  -->
+{% extends "layout.html" %}
+{% block content %}
+<div class="container-fluid" id="cardifflogo">
+    <img src="static/assets/Cardiff_University_(logo).png" style="width:250px; height:250px; display: block; margin-left: auto; margin-right: auto;" />
+    <!-- <input type="image" src="static/assets/Cardiff_University_(logo).png" name="saveForm" class="btTxt submit" id="saveForm" style="width:500px;height:500px;" /> -->
+    <!-- <div class="row" style="display: block; margin-left: auto; margin-right: auto ;">
+        <div class="column" >
+            <input type="image" src="static/assets/Staff_Login.png" class="btTxt submit" />
+        </div>
+        <div class="column">
+            <input type="image" src="static/assets/Student_Login.png" class="btTxt submit" />
+        </div>
+    </div> -->
+    
+
+    <div class="image-container">
+        <a href="{{url_for('studentView')}}"><img src="static/assets/Student_Login.png" class="btTxt submit" style="display: block;" alt="studentview_logo" /></a>
+        <a href="{{url_for('staffView')}}" ><img src="static/assets/Staff_Login.png" class="btTxt submit" style="display: block;" alt="staffview_logo" /></a>
+    </div>
+    <h1 class="container-fluid pt-2" style="text-align: center;">
+        Please select the view for the login portal
+    </h1>
+
+{% endblock content %}
